@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fuente Fin -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index.css">
+    <!-- CSS Fin -->
+    <script src="./Display.js" type="text/javascript"></script>
+    <script src="./Calculadora.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./login.js"></script>
+    <script src="./index.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Mi Calculadora</title>
+</head>
+<body>
+    <!-- inicio headear -->
+    <header>
+
+        <div class="fondo container-fluid w-100 d-flex justify-content-end aling-items-end">
+            <div class="card text-bg-primary p-3 spacers">
+                <h3 class="texxt-primary col-lg-12 text-center">Login</h3>
+                <form id="formulario_login" method="POST">
+                    <div class="mb-3">
+                      <label for="txt_usuario" class="form-label">Usuario</label>
+                      <input type="text" class="form-control" id="txt_usuario" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="txt_contraseña" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="txt_contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block col-lg-12">ingresar</button>
+                  </form>
+
+            </div>
+        </div> 
+
+    </header>
+
+    <!-- inicio main -->
+    <main>
+        <div class="contenedor">
+            <div class="calculadora">
+                <div class="display">
+                   <div id="valor-actual"></div> 
+                   <div id="valor-anterior"></div>
+                </div>
+                <button class="col-2" onclick="display.borrarTodo()">C</button>
+                <button onclick="display.borrar()">&larr;</button>
+                <button class="operador" value="dividir">%</button>
+                <button class="numero">7</button>
+                <button class="numero">8</button>
+                <button class="numero">9</button>
+                <button class="operador" value="multiplicar">X</button>
+                <button class="numero">4</button>
+                <button class="numero">5</button>
+                <button class="numero">6</button>
+                <button class="operador" value="resta">-</button>
+                <button class="numero">1</button>
+                <button class="numero">2</button>
+                <button class="numero">3</button>
+                <button class="operador" value="suma">+</button>
+                <button class="numero, col-2" id="boton0">0</button>
+                <button class="numero">.</button>
+                <button class="operador" value="igual">=</button>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- inicio footer -->
+    <footer>
+
+    </footer>
+</body>
+</html>
