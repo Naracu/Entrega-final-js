@@ -3,20 +3,25 @@
    color: white; 
 }
 
+h2 {
+    text-align: center;
+    color: #333;
+}
+
 body{
     margin:  0;
 }
 /* Header */
 header{
     height: 325px;
-    background-color: rgb(38, 38, 156);
+    background-color: #26269c;
 }
 /* Header */
 
 /* Main */
 main{
     margin: 0;
-    background-color: darkolivegreen;
+    background-color: hsla(60, 1%, 19%, 0.808);
     width: 100%;
     height: 900px;
 }
@@ -82,3 +87,13 @@ button:active{
 button:focus{
     outline: none
 }
+
+input, select, label, .resultado {
+    color: black;
+  }
+
+  #historial {
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+    overflow-y: auto;
+  }

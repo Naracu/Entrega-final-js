@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Fuente Fin -->
     <!-- CSS -->
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./Css/index.css">
     <!-- CSS Fin -->
-    <script src="./Display.js" type="text/javascript"></script>
-    <script src="./Calculadora.js" type="text/javascript"></script>
+    <script src="./Display/Display.js" type="text/javascript"></script>
+    <script src="./Calculadora/Calculadora.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="./login.js"></script>
-    <script src="./index.js" type="text/javascript" defer></script>
+    <script src="./Login/login.js"></script>
+    <script src="./index/index.js" type="text/javascript" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Mi Calculadora</title>
@@ -23,7 +23,8 @@
 <body>
     <!-- inicio headear -->
     <header>
-
+        <div class="calculadoraw"></div>
+        <div id="historial"></div>
         <div class="fondo container-fluid w-100 d-flex justify-content-end aling-items-end">
             <div class="card text-bg-primary p-3 spacers">
                 <h3 class="texxt-primary col-lg-12 text-center">Login</h3>
@@ -46,6 +47,13 @@
 
     <!-- inicio main -->
     <main>
+        <input type="number" id="cantidad" placeholder="Cantidad">
+<select id="divisa">
+  <option value="EUR">Euro</option>
+  <option value="GBP">Libra Esterlina</option>
+  </select>
+<button onclick="calcularConConversion()">Convertir</button>
+<p id="resultado"></p>
         <div class="contenedor">
             <div class="calculadora">
                 <div class="display">
@@ -70,7 +78,6 @@
                 <button class="numero, col-2" id="boton0">0</button>
                 <button class="numero">.</button>
                 <button class="operador" value="igual">=</button>
-
             </div>
 
         </div>

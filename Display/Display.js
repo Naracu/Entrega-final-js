@@ -32,6 +32,7 @@ class Display {
             return;
         this.valorActual = this.valorActual.toString() + numero.toString();
         this.imprimirValores();
+        this.cambiarEstilo(parseFloat(this.valorActual));
     }
 
     imprimirValores() {
@@ -45,7 +46,7 @@ class Display {
 
         if(isNaN(valorActual) || isNaN(valorAnterior)) return
         this.valorActual = this.calculador[this.tipoOperacion](valorAnterior, valorActual).toString();
-        
+        this.cambiarEstilo(parseFloat(this.valorActual));
     }
     computar(tipo) {
         this.tipoOperacion !== 'igual' && this.calcular();
@@ -53,5 +54,16 @@ class Display {
         this.valorAnterior = this.valorActual || this.valorAnterior;
         this.valorActual = '';
         this.imprimirValores();
+    }
+    cambiarEstilo(valor) {
+        const esCeroOPar = valor === 0 || valor % 2 === 0;
+        const nuevoColorBody = esCeroOPar ? '#E8BE48' : 'rgba(48, 48, 47, 0.808)';
+        const nuevoColorHeader = esCeroOPar ? '#E89148' : 'rgb(38, 38, 156)';
+        const nuevoColorCalculadora = esCeroOPar ? '#A8A15E' : 'darkmagenta';
+
+        document.querySelector('main').style.backgroundColor = nuevoColorBody;
+        document.querySelector('header').style.backgroundColor = nuevoColorHeader;
+        document.querySelector('.calculadora').style.backgroundColor = nuevoColorCalculadora;
+        document.querySelector('button').style.backgroundColor = nuevoColorCalculadora;
     }
 }
